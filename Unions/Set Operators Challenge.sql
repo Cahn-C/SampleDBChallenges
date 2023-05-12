@@ -33,7 +33,7 @@ union all
 select 'Arizona' as stat_name, sighting_id, common_name, scientific_name, sighting_location, sighting_date 
 from bird.arizona_sightings
 union all
-select 'Florida' as stat_name, observation_id, null, scientific_name, locality, sighting_datetime 
+select 'Florida' as stat_name, observation_id, null, scientific_name, locality, cast(sighting_datetime as date)
 from bird.florida_sightings
 
 
